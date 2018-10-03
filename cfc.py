@@ -31,10 +31,7 @@ def marquer_predecesseurs(v, graph):
 def composantes_connexes(graph):
     #Global: c'est pour accéder aux variables globales
     #Python considère tous qui est dans une fonction comme variable locale
-    global composants
-    global plus
-    global moins
-    global noeuds_restants
+    global composants, plus, moins, noeuds_restants
     # initialiser les listes
     composants = []
     plus = set()
@@ -55,8 +52,3 @@ def composantes_connexes(graph):
         moins = set() # vider la list des -
 
     return composants # retourner les composantes connexes
-
-
-test = composantes_connexes({1:[2],2:[1,5],3:[4],4:[3,5],5:[6],6:[7],7:[8],8:[6,9],9:[]})
-
-print(test)
