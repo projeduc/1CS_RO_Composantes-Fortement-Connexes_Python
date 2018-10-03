@@ -80,4 +80,4 @@ Liens:
 
 ## Implémentations
 
-Dans nos examples, nous allons utilisé des [Listes d'adjacence](https://fr.wikipedia.org/wiki/Liste_d%27adjacence) pour représenter un graph.
+Dans nos examples, nous allons utiliser des [Listes d'adjacence](https://fr.wikipedia.org/wiki/Liste_d%27adjacence) pour représenter un graph.
