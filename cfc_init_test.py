@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from cfc import composantes_connexes
+from cfc_init import composantes_connexes
 
 graph = {
     1:[2], # 1 --> 2

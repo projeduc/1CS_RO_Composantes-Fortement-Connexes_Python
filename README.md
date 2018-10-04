@@ -1,6 +1,6 @@
 # Composantes Fortement Connexes (CFC)
 
-Etant donnée un graph orienté G(V, A), où V est l'ensemble des noeuds et A est l'ensemble des arcs, on dit qu'un graph partiel G'(V',A') de G forme une composante fortement connexe si et seulement si quelque soit deux noeuds u, v de V' il existe un chemin de u vers v.
+Etant donnée un graph orienté G(V, A), où V est l'ensemble des noeuds et A est l'ensemble des arcs, on dit qu'un sous graph G'(V',A') de G forme une composante fortement connexe si et seulement si quelque soit deux noeuds u, v de V' il existe un chemin de u vers v.
 
 ## Quelques applications
 
@@ -30,7 +30,7 @@ VARIABLES GLOBALES:
 
 PROCEDURE marquer_prédécesseurs(v)
    POUR CHAQUE (u, v) ∈ A FAIRE
-      SI u ∉ M FAIRE  
+      SI u ∈ (R-M) FAIRE // u ∈ R ET u ∉ M
          M = M ∪ {u}
          marquer_prédécesseurs(u)
       FIN SI
@@ -39,7 +39,7 @@ FIN PROCEDURE
 
 PROCEDURE marquer_successeurs(v)
    POUR CHAQUE (v, u) ∈ A FAIRE
-      SI u ∉ P FAIRE  
+      SI u ∈ (R-P) FAIRE  //u ∈ R ET u ∉ P
          P = P ∪ {u}
          marquer_successeurs(u)
       FIN SI
@@ -59,9 +59,9 @@ DEBUT
 FIN
 ```
 
+
+
 ## Algorithme de Kosaraju
-
-
 
 Liens:
 * Sur [Wikipedia](https://fr.wikipedia.org/wiki/Algorithme_de_Kosaraju)

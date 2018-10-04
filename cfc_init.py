@@ -12,21 +12,22 @@ noeuds_restants = set()
 
 # marquer les successeurs avec +
 def marquer_successeurs(v, graph):
-    global plus
+    global plus, noeuds_restants
     succ = graph[v] # récupérer la list des successeurs de ce noeud
     for u in succ: # parcourir les successeurs de v
-        if not u in plus: # si un successeur u n'est pas marqué +
+        if u in noeuds_restants and not u in plus: # si un successeur u n'est pas marqué +
             plus.add(u) #marquer u avec +
             marquer_successeurs(u, graph) # marquer les successeurs de u avec +
 
 # marquer les predecesseurs avec -
 def marquer_predecesseurs(v, graph):
-    global moins
+    global moins, noeuds_restants
     for u in graph: #parcourir les éléments u du graph
-        succ = graph[u] #récupérer les successeurs de chaque élément
-        if (v in succ) and (u not in moins): # si v est un successeur de u et u n'est pas marqué -
-            moins.add(u) # marquer u avec -
-            marquer_predecesseurs(u, graph) # marquer les predecesseurs de u avec -
+        if u in noeuds_restants:
+            succ = graph[u] #récupérer les successeurs de chaque élément
+            if (v in succ) and (u not in moins): # si v est un successeur de u et u n'est pas marqué -
+                moins.add(u) # marquer u avec -
+                marquer_predecesseurs(u, graph) # marquer les predecesseurs de u avec -
 
 def composantes_connexes(graph):
     #Global: c'est pour accéder aux variables globales
