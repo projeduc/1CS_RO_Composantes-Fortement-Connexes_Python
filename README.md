@@ -59,6 +59,19 @@ DEBUT
 FIN
 ```
 
+Exemple:
+
+![](img/exp_g1.jpeg)
+![](img/exp_g1_init1.jpeg)
+![](img/exp_g1_init2.jpeg)
+![](img/exp_g1_init3.jpeg)
+![](img/exp_g1_init4.jpeg)
+![](img/exp_g1_init5.jpeg)
+![](img/exp_g1_init6.jpeg)
+![](img/exp_g1_init7.jpeg)
+![](img/exp_g1_init8.jpeg)
+...
+![](img/exp_cfc1.jpeg)
 
 
 ## Algorithme de Kosaraju
